@@ -1,0 +1,34 @@
+[
+  {
+    "segment_id": "S1",
+    "name": "High-engagement power users",
+    "description": "Users who log in 5+ days per week, use advanced features, and have customised at least three workspace settings.",
+    "size": 412,
+    "tags": ["advanced", "engaged", "frequent-user"],
+    "member_ids": ["P1", "P2", "P7", "P11", "P19", "P24"]
+  },
+  {
+    "segment_id": "S2",
+    "name": "Onboarding stallers",
+    "description": "Users who completed signup but stalled before finishing the first project setup. Average session length under 90 seconds.",
+    "size": 287,
+    "tags": ["new-user", "stalled", "onboarding"],
+    "member_ids": ["P3", "P5", "P12", "P15"]
+  },
+  {
+    "segment_id": "S3",
+    "name": "Casual weekenders",
+    "description": "Users who only access the product on weekends, with short sessions and minimal use of collaboration features.",
+    "size": 619,
+    "tags": ["casual", "weekend-only"],
+    "member_ids": ["P4", "P8", "P14", "P22"]
+  },
+  {
+    "segment_id": "S4",
+    "name": "Team admins",
+    "description": "Workspace administrators managing permissions, billing, and integrations for teams of 5+ members.",
+    "size": 96,
+    "tags": ["admin", "team-lead", "billing"],
+    "member_ids": ["P6", "P9", "P17"]
+  }
+]

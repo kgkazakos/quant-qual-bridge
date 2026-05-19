@@ -1,0 +1,62 @@
+[
+  {
+    "theme_id": "T1",
+    "name": "Mastery-seeking behaviour",
+    "description": "Participants describe wanting to feel expert and capable, often customising workflows and pushing advanced features to the limit.",
+    "quotes": [
+      "I want to know I'm using this thing properly, like a power user.",
+      "Every time I find a shortcut I feel a little proud.",
+      "The advanced settings — that's where I live, honestly."
+    ],
+    "tags": ["expertise", "advanced"],
+    "participant_ids": ["P1", "P7", "P19"]
+  },
+  {
+    "theme_id": "T2",
+    "name": "Friction during early setup",
+    "description": "Participants in the first session frequently mentioned not knowing where to start. The onboarding tour was perceived as long or skippable.",
+    "quotes": [
+      "I just bounced. I didn't know what the first thing I should do was.",
+      "Honestly the setup felt like homework. I closed the tab.",
+      "I came back two weeks later and started over from scratch."
+    ],
+    "tags": ["onboarding", "stalled"],
+    "participant_ids": ["P3", "P12", "P15"]
+  },
+  {
+    "theme_id": "T3",
+    "name": "Permissions anxiety",
+    "description": "Admins describe a recurring anxiety around accidentally exposing data when changing workspace permissions or billing settings.",
+    "quotes": [
+      "Every time I touch permissions I get a little knot in my stomach.",
+      "Billing and admin together feels like one wrong click and I've broken something.",
+      "I'd love a clearer permissions preview before I commit to changes."
+    ],
+    "tags": ["admin", "billing", "anxiety"],
+    "participant_ids": ["P6", "P17"]
+  },
+  {
+    "theme_id": "T4",
+    "name": "Time-of-week as identity",
+    "description": "Several participants framed their usage as 'a weekend thing' — a personal project space distinct from weekday work tools.",
+    "quotes": [
+      "It's my Saturday morning ritual. Coffee, this tool, my own projects.",
+      "I deliberately don't open it during the week. It's not for work.",
+      "Weekend-only — it's almost a hobby at this point."
+    ],
+    "tags": ["weekend-only", "casual"],
+    "participant_ids": ["P4", "P14"]
+  },
+  {
+    "theme_id": "T5",
+    "name": "Quiet collaborators",
+    "description": "Some participants prefer asynchronous, low-touch collaboration — they avoid live editing and prefer leaving comments.",
+    "quotes": [
+      "I don't love when someone's in the doc at the same time.",
+      "Comments first, conversations later.",
+      "I'd rather get the thing right alone, then share it."
+    ],
+    "tags": ["async", "collaboration"],
+    "participant_ids": ["P22"]
+  }
+]

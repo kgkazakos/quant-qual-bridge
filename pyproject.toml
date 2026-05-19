@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-qual-bridge"
+version = "0.1.0"
+description = "Surface possible correspondences between quantitative segments and qualitative themes — a discovery and visualisation tool, not a triangulation engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kostas Kazakos" }]
+keywords = ["ux-research", "mixed-methods", "qualitative", "quantitative", "research-tools", "cpr"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+ui = [
+    "streamlit>=1.30",
+    "plotly>=5.18",
+]
+llm = [
+    "litellm>=1.40",
+]
+all = [
+    "streamlit>=1.30",
+    "plotly>=5.18",
+    "litellm>=1.40",
+]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+qqb = "quant_qual_bridge.cli:main"
+quant-qual-bridge = "quant_qual_bridge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kgkazakos/quant-qual-bridge"
+Repository = "https://github.com/kgkazakos/quant-qual-bridge"
+Issues = "https://github.com/kgkazakos/quant-qual-bridge/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["quant_qual_bridge*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

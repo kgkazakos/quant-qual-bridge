@@ -1,0 +1,44 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install build deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools pytest ruff click rich
+
+      - name: Install package (no build isolation)
+        run: |
+          pip install -e . --no-build-isolation
+
+      - name: Ruff (lint)
+        run: |
+          # llm.py depends on optional litellm import; exclude it from CI lint to
+          # avoid flagging on environments without the optional extra installed.
+          ruff check quant_qual_bridge tests --exclude quant_qual_bridge/llm.py
+
+      - name: Pytest
+        run: |
+          # llm.py is excluded from CI because it depends on optional API keys
+          # that aren't configured in the CI environment.
+          pytest --ignore=quant_qual_bridge/llm.py
