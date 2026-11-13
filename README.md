@@ -77,7 +77,7 @@ Optional flags:
 |---|---|---|
 | `--min-lexical-terms` | `2` | Lower for more candidates, higher for tighter results |
 | `--no-llm` | off | Disable LLM enrichment entirely |
-| `--llm-backend` | `anthropic/claude-opus-4-7` | Or `gemini/gemini-3.1-pro`, `openai/gpt-5.5` |
+| `--llm-backend` | `anthropic/claude-opus-4-7` | Or `gemini/gemini-4-argon`, `openai/gpt-5.5` |
 | `--max-enrichments` | `30` | Cap on enrichment calls (cost guardrail) |
 | `--json-output` | off | Emit JSON to stdout for downstream pipelines |
 
@@ -145,7 +145,7 @@ Three supported, opt-out (LLM enrichment is on by default):
 | Backend | Env var |
 |---|---|
 | `anthropic/claude-opus-4-7` (default) | `ANTHROPIC_API_KEY` |
-| `gemini/gemini-3.1-pro` | `GEMINI_API_KEY` |
+| `gemini/gemini-4-argon` | `GEMINI_API_KEY` |
 | `openai/gpt-5.5` | `OPENAI_API_KEY` |
 
 If no API key is present, the pipeline degrades silently: each enrichment records `backend: "none"` and the rule-based output stands on its own.
